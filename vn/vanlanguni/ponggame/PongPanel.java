@@ -63,7 +63,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 	private int playerOneHeight = 50;
 
 	/** Player 2's paddle: position and size */
-	private int playerTwoX = 475;
+	private int playerTwoX = 472;
 	private int playerTwoY = 250;
 	private int playerTwoWidth = 10;
 	private int playerTwoHeight = 50;
@@ -222,6 +222,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 			int playerTwoLeft = playerTwoX;
 
 			// draw dashed line down center
+			g.setColor(Color.GREEN);
 			for (int lineY = 0; lineY < getHeight(); lineY += 50) {
 				g.drawLine(250, lineY, 250, lineY + 25);
 			}
@@ -231,6 +232,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 			g.drawLine(playerTwoLeft, 0, playerTwoLeft, getHeight());
 
 			// draw the scores
+			g.setColor(Color.BLUE);
 			g.setFont(new Font(Font.DIALOG, Font.BOLD, 36));
 			g.drawString(String.valueOf(playerOneScore), 100, 100); // Player 1
 																	// score
